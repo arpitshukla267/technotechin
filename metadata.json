@@ -1,0 +1,6 @@
+{
+  "name": "Techno Techin",
+  "description": "A modern, premium digital technology studio offering Web Development, Graphics, and Digital Identity services.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
