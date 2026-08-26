@@ -62,7 +62,7 @@ export const TestimonialsSection: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-60px' }}
               transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-              className="text-3xl sm:text-4xl md:text-[40px] font-medium text-[#111111] tracking-tight leading-tight"
+              className="text-3xl sm:text-4xl md:text-[40px] font-medium text-[#111111] dark:text-[#f5f5f5] tracking-tight leading-tight"
             >
               Client perspectives.
             </motion.h2>
@@ -71,7 +71,7 @@ export const TestimonialsSection: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-60px' }}
               transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-              className="mt-4 text-base text-[#666666] font-normal leading-relaxed"
+              className="mt-4 text-base text-[#666666] dark:text-[#999999] font-normal leading-relaxed"
             >
               Direct accounts from founders, product leaders, and managing directors.
             </motion.p>
@@ -83,7 +83,7 @@ export const TestimonialsSection: React.FC = () => {
               id="prev-testimonial-btn"
               onClick={prevTestimonial}
               aria-label="Previous Perspective"
-              className="w-10 h-10 border border-[#E5E7EB] flex items-center justify-center text-[#111111] hover:border-[#111111] hover:bg-[#111111] hover:text-white transition-all duration-200 cursor-pointer"
+              className="w-10 h-10 border border-[#E5E7EB] dark:border-[#333333] flex items-center justify-center text-[#111111] dark:text-white hover:border-[#111111] dark:hover:border-white hover:bg-[#111111] dark:hover:bg-white hover:text-white dark:hover:text-[#111111] transition-all duration-200 cursor-pointer"
             >
               <ArrowLeft className="w-4 h-4" />
             </button>
@@ -91,7 +91,7 @@ export const TestimonialsSection: React.FC = () => {
               id="next-testimonial-btn"
               onClick={nextTestimonial}
               aria-label="Next Perspective"
-              className="w-10 h-10 border border-[#E5E7EB] flex items-center justify-center text-[#111111] hover:border-[#111111] hover:bg-[#111111] hover:text-white transition-all duration-200 cursor-pointer"
+              className="w-10 h-10 border border-[#E5E7EB] dark:border-[#333333] flex items-center justify-center text-[#111111] dark:text-white hover:border-[#111111] dark:hover:border-white hover:bg-[#111111] dark:hover:bg-white hover:text-white dark:hover:text-[#111111] transition-all duration-200 cursor-pointer"
             >
               <ArrowRight className="w-4 h-4" />
             </button>
@@ -100,7 +100,7 @@ export const TestimonialsSection: React.FC = () => {
 
         {/* Editorial Testimonial Display */}
         <div className="relative min-h-[300px] md:min-h-[240px] flex flex-col justify-between">
-          <div className="w-6 h-6 border-l-2 border-t-2 border-[#111111] mb-6 opacity-40" />
+          <div className="w-6 h-6 border-l-2 border-t-2 border-[#111111] dark:border-white mb-6 opacity-40" />
 
           <AnimatePresence mode="wait" custom={direction}>
             <motion.div
@@ -114,22 +114,22 @@ export const TestimonialsSection: React.FC = () => {
               className="space-y-8"
             >
               {/* Quote Text */}
-              <p className="text-xl sm:text-2xl md:text-[26px] text-[#111111] font-normal leading-relaxed tracking-tight max-w-4xl">
+              <p className="text-xl sm:text-2xl md:text-[26px] text-[#111111] dark:text-[#f5f5f5] font-normal leading-relaxed tracking-tight max-w-4xl">
                 "{current.quote}"
               </p>
 
               {/* Client Info */}
-              <div className="pt-6 border-t border-[#F0F0F0] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div className="pt-6 border-t border-[#F0F0F0] dark:border-[#222222] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div>
-                  <h4 className="text-base font-medium text-[#111111]">
+                  <h4 className="text-base font-medium text-[#111111] dark:text-[#f5f5f5]">
                     {current.clientName}
                   </h4>
-                  <p className="text-xs text-[#777777] mt-0.5">
+                  <p className="text-xs text-[#777777] dark:text-[#aaaaaa] mt-0.5">
                     {current.clientPosition}, {current.company}
                   </p>
                 </div>
 
-                <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-[#888888] bg-[#FAFAFA] border border-[#EEEEEE] px-3 py-1 self-start sm:self-auto">
+                <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-[#888888] dark:text-[#cccccc] bg-[#FAFAFA] dark:bg-[#1a1a1a] border border-[#EEEEEE] dark:border-[#333333] px-3 py-1 self-start sm:self-auto">
                   {current.serviceCategory}
                 </span>
               </div>
@@ -147,7 +147,9 @@ export const TestimonialsSection: React.FC = () => {
                 }}
                 aria-label={`Go to perspective ${idx + 1}`}
                 className={`h-[2px] transition-all duration-300 cursor-pointer ${
-                  idx === currentIndex ? 'w-8 bg-[#111111]' : 'w-3 bg-[#E5E7EB] hover:bg-[#999999]'
+                  idx === currentIndex
+                    ? 'w-8 bg-[#111111] dark:bg-white'
+                    : 'w-3 bg-[#E5E7EB] dark:bg-[#333333] hover:bg-[#999999] dark:hover:bg-[#666666]'
                 }`}
               />
             ))}

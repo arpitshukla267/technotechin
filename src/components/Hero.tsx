@@ -240,12 +240,12 @@ export const Hero: React.FC<HeroProps> = ({
         className="absolute inset-0 z-0 pointer-events-none overflow-hidden"
       >
         {/* Real background image with opacity overlay */}
-        <div className="absolute inset-0 z-0 opacity-[0.18] mix-blend-screen pointer-events-none">
-          <img src={heroBgImg} alt="" className="w-full h-full object-cover" />
+        <div className="absolute inset-0 z-0 opacity-[0.9] mix-blend-screen pointer-events-none">
+          <img src="/hero-bg.png" alt="" className="w-full h-full object-cover" />
         </div>
 
         {/* Subtle Ambient Radial Lighting in Center */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] md:w-[900px] h-[500px] md:h-[650px] bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-neutral-800/25 via-neutral-950/40 to-transparent blur-3xl pointer-events-none" />
+        {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] md:w-[900px] h-[500px] md:h-[650px] bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-neutral-800/25 via-neutral-950/40 to-transparent blur-3xl pointer-events-none" /> */}
 
         {/* Technical Animated Circuit-Trace SVG Doodle */}
         <HeroCircuitTrace />
